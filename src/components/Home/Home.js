@@ -1,7 +1,7 @@
 import React from "react";
 const Home = () => {
   return (
-    <div>
+    <div className="m-5">
       <h1>I GROW BY HELPING PEOPLE IN NEED</h1>
     </div>
   );
