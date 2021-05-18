@@ -2,7 +2,7 @@ import React from "react";
 const Home = () => {
   return (
     <div>
-      <h1>I am Home</h1>
+      <h1>I GROW BY HELPING PEOPLE IN NEED</h1>
     </div>
   );
 };
