@@ -1,10 +1,11 @@
 import React from "react";
 import fakedata from "../FakeData/fakeData.json";
+import Event from "../Event/Event";
 const Events = () => {
-  console.log(fakedata);
+  // console.log(fakedata);
   return (
-    <div>
-      <h1>I am Events</h1>
+    <div className="row">
+    { fakedata.map(e => <Event event={e}></Event> ) }
     </div>
   );
 };
