@@ -5,6 +5,7 @@ import Home from "./components/Home/Home";
 import NotFound from "./components/NotFound/NotFound";
 
 import Navbar from "./components/Navbar/Navbar";
+import Login from "./components/Login/Login";
 
 export default function App() {
   return (
@@ -14,6 +15,15 @@ export default function App() {
         <Switch>
           <Route path="/Home">
             <Home />
+          </Route>
+          <Route path="/login">
+            <Login/>
+          </Route>
+          <Route path="/registEvent">
+            <Login/>
+          </Route>
+          <Route path="/myEvent">
+            <Login/>
           </Route>
           <Route exact path="/">
             <Home />
