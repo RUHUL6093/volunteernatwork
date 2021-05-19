@@ -50,13 +50,16 @@ const Login = () => {
   };
   return (
     <div className="container m-5">
-      <button
-        onClick={handleGooogleSignIn}
-        className="btn btn-primary text-center"
-      >
-        {" "}
-        Continue With Google
-      </button>
+      <div>
+        <button
+          onClick={handleGooogleSignIn}
+          className="btn btn-primary text-center"
+        >
+          {" "}
+          Continue With Google
+        </button>
+      </div>
+      <br />
       <div>
         <button
           onClick={handleFbSignIn}
