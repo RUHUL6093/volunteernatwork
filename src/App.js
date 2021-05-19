@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Login from "./components/Login/Login";
 import RegisterEvent from "./components/RegisterEvent/RegisterEvent";
 import MyEvent from "./components/MyEvent/MyEvent";
+import PrivateRoute from './components/PrivateRoute/PrivateRoute'
 
 export default function App() {
   return (
@@ -21,12 +22,12 @@ export default function App() {
           <Route path="/login">
             <Login />
           </Route>
-          <Route path="/registerEvent">
+          <PrivateRoute path="/registerEvent">
             <RegisterEvent />
-          </Route>
-          <Route path="/myEvent">
+          </PrivateRoute>
+          <PrivateRoute path="/myEvent">
             <MyEvent />
-          </Route>
+          </PrivateRoute>
           <Route exact path="/">
             <Home />
           </Route>
