@@ -10,19 +10,19 @@ if (!firebase.apps.length) {
 const Login = () => {
   const googleProvider = new firebase.auth.GoogleAuthProvider();
   const fbProvider = new firebase.auth.FacebookAuthProvider();
-  // const handleGooogleSignIn = () => {
-  //   firebase
-  //     .auth()
-  //     .signInWithPopup(googleProvider)
-  //     .then((result) => {
-  //       const user = result.user;
-  //       console.log(user);
-  //     })
-  //     .catch((error) => {
-  //       const errorMessage = error.message;
-  //       console.log(errorMessage);
-  //     });
-  // };
+  const handleGooogleSignIn = () => {
+    firebase
+      .auth()
+      .signInWithPopup(googleProvider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        console.log(errorMessage);
+      });
+  };
   const handleFbSignIn = () => {
     firebase
       .auth()
@@ -38,13 +38,13 @@ const Login = () => {
   };
   return (
     <div className="container m-5">
-      {/* <button
+      <button
         onClick={handleGooogleSignIn}
         className="btn btn-primary text-center"
       >
         {" "}
         Continue With Google
-      </button> */}
+      </button>
       <div>
         <button
           onClick={handleFbSignIn}
