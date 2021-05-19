@@ -6,24 +6,26 @@ import NotFound from "./components/NotFound/NotFound";
 
 import Navbar from "./components/Navbar/Navbar";
 import Login from "./components/Login/Login";
+import RegisterEvent from "./components/RegisterEvent/RegisterEvent";
+import MyEvent from "./components/MyEvent/MyEvent";
 
 export default function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar/>
+        <Navbar />
         <Switch>
           <Route path="/Home">
             <Home />
           </Route>
           <Route path="/login">
-            <Login/>
+            <Login />
           </Route>
-          <Route path="/registEvent">
-            <Login/>
+          <Route path="/registerEvent">
+            <RegisterEvent />
           </Route>
           <Route path="/myEvent">
-            <Login/>
+            <MyEvent />
           </Route>
           <Route exact path="/">
             <Home />
