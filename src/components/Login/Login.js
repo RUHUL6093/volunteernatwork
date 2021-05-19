@@ -9,28 +9,51 @@ if (!firebase.apps.length) {
 
 const Login = () => {
   const googleProvider = new firebase.auth.GoogleAuthProvider();
-  const handleGooogleSignIn = () => {
+  const fbProvider = new firebase.auth.FacebookAuthProvider();
+  // const handleGooogleSignIn = () => {
+  //   firebase
+  //     .auth()
+  //     .signInWithPopup(googleProvider)
+  //     .then((result) => {
+  //       const user = result.user;
+  //       console.log(user);
+  //     })
+  //     .catch((error) => {
+  //       const errorMessage = error.message;
+  //       console.log(errorMessage);
+  //     });
+  // };
+  const handleFbSignIn = () => {
     firebase
       .auth()
-      .signInWithPopup(googleProvider)
+      .signInWithPopup(fbProvider)
       .then((result) => {
-        const user = result.user;
+        var user = result.user;
         console.log(user);
       })
       .catch((error) => {
-        const errorMessage = error.message;
-        console.log(errorMessage)
+        var errorMessage = error.message;
+        console.log(errorMessage);
       });
   };
   return (
     <div className="container m-5">
-      <button
+      {/* <button
         onClick={handleGooogleSignIn}
         className="btn btn-primary text-center"
       >
         {" "}
         Continue With Google
-      </button>
+      </button> */}
+      <div>
+        <button
+          onClick={handleFbSignIn}
+          className="btn btn-primary text-center"
+        >
+          {" "}
+          Continue With Fcaebook
+        </button>
+      </div>
     </div>
   );
 };
